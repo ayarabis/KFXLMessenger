@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<StackPane maxHeight="508.0" maxWidth="319.0" prefHeight="508.0" prefWidth="319.0"
+           style="-fx-background-color: transparent; -fx-padding: 10;" xmlns="http://javafx.com/javafx/8.0.92"
+           xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="488.0" prefWidth="299.0"
+                    style="-fx-background-color: white;">
+            <effect>
+                <DropShadow color="#000000d3"/>
+            </effect>
+            <children>
+                <AnchorPane fx:id="background" maxHeight="488.0" maxWidth="299.0" prefHeight="488.0" prefWidth="299.0"
+                            style="-fx-background-color: rgba(227,242,253,0.8);" AnchorPane.bottomAnchor="0.0"
+                            AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0"/>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="mainPane" prefHeight="488.0" prefWidth="299.0">
+            <children>
+                <VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" spacing="10.0"
+                      AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                      AnchorPane.topAnchor="0.0">
+                    <children>
+                        <StackPane style="-fx-padding: 3; -fx-border-radius: 100; -fx-border-color: grey;">
+                            <VBox.margin>
+                                <Insets top="30.0"/>
+                            </VBox.margin>
+                        </StackPane>
+                        <Label style="-fx-text-fill: dimgray;" text="Username"/>
+                        <TextField fx:id="tfUser" prefHeight="25.0" prefWidth="184.0" style="-fx-alignment: center;"/>
+                        <VBox alignment="CENTER" fillWidth="false" spacing="10.0"
+                              style="-fx-padding: 10 20; -fx-border-color: lightgrey; -fx-border-radius: 10;">
+                            <children>
+                                <Label style="-fx-font-weight: bold; -fx-text-fill: dimgrey;" text="Connection Details"
+                                       textFill="WHITE"/>
+                                <Separator prefHeight="3.0" prefWidth="154.0">
+                                    <VBox.margin>
+                                        <Insets/>
+                                    </VBox.margin>
+                                </Separator>
+                                <Label style="-fx-text-fill: white; " text="Host IP"/>
+                                <TextField fx:id="tfHost" prefHeight="25.0" prefWidth="184.0"
+                                           style="-fx-alignment: center;" text="localhost"/>
+                                <Label style="-fx-text-fill: white; " text="Port"/>
+                                <TextField fx:id="tfPort" prefHeight="25.0" prefWidth="141.0"
+                                           style="-fx-alignment: center;" text="6666"/>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="10.0"/>
+                            </VBox.margin>
+                        </VBox>
+                        <Button fx:id="btnSubmit" onAction="#connect" prefHeight="25.0"
+                                prefWidth="224.0" style="-fx-background-color: #2196F3; -fx-text-fill: white;"
+                                text="Ok">
+                            <VBox.margin>
+                                <Insets top="30.0"/>
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+                <HBox fx:id="header" alignment="CENTER_RIGHT" layoutX="272.0" layoutY="-1.0" maxHeight="-Infinity"
+                      maxWidth="-Infinity" style="-fx-padding: 3; -fx-background-color: #2196F3;"
+                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button onAction="#minimize" text="_"/>
+                        <Button onAction="#exit" text="x"/>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.*?>
+<BorderPane prefHeight="350.0" prefWidth="472.0" style="-fx-background-color: white;"
+            xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+    <effect>
+        <DropShadow color="#0000006f"/>
+    </effect>
+    <top>
+        <GridPane hgap="5.0" style="-fx-background-color: #2196F3; -fx-padding: 5;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="91.0" minWidth="10.0" percentWidth="10.0"
+                                   prefWidth="58.0"/>
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="220.0" minWidth="10.0"
+                                   prefWidth="109.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" percentWidth="10.0"
+                                   prefWidth="74.0"/>
+                <ColumnConstraints fillWidth="false" hgrow="SOMETIMES" maxWidth="238.0" minWidth="10.0"
+                                   percentWidth="20.0" prefWidth="152.0"/>
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="201.0"
+                                   minWidth="10.0" percentWidth="15.0" prefWidth="115.0"/>
+                <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="201.0"
+                                   minWidth="10.0" percentWidth="15.0" prefWidth="115.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Label text="IP" textFill="WHITE">
+                    <padding>
+                        <Insets left="10.0"/>
+                    </padding>
+                </Label>
+                <Label text="Port" textFill="WHITE" GridPane.columnIndex="2">
+                    <padding>
+                        <Insets left="10.0"/>
+                    </padding>
+                </Label>
+                <TextField fx:id="txtIP" alignment="CENTER" editable="false" promptText="--" GridPane.columnIndex="1"/>
+                <TextField fx:id="txtPort" prefHeight="25.0" prefWidth="103.0" text="6666" GridPane.columnIndex="3"/>
+                <Button fx:id="btnStart" onAction="#startConnection" prefHeight="25.0"
+                        prefWidth="105.0" style="-fx-background-color: #009688;" text="Start" textFill="WHITE"
+                        GridPane.columnIndex="4"/>
+                <Button fx:id="btnClose" disable="true" layoutX="339.0" layoutY="18.0"
+                        onAction="#closeConnection" prefHeight="25.0" prefWidth="105.0"
+                        style="-fx-background-color: #F44336;" text="Close" textFill="WHITE"
+                        GridPane.columnIndex="5"/>
+            </children>
+        </GridPane>
+    </top>
+    <center>
+        <TextArea fx:id="console" editable="false" focusTraversable="false" prefHeight="200.0" prefWidth="200.0"
+                  wrapText="true" BorderPane.alignment="CENTER"/>
+    </center>
+    <bottom>
+        <GridPane style="-fx-padding: 5;" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="282.0" minWidth="10.0" prefWidth="277.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="151.0" minWidth="10.0"
+                                   percentWidth="20.0" prefWidth="38.0"/>
+                <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" percentWidth="20.0"
+                                   prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Button prefWidth="80.0" style="-fx-background-color: #2196F3;" text="Save"
+                        textFill="WHITE" GridPane.columnIndex="1"/>
+                <Button onAction="#clearConsole" prefWidth="80.0"
+                        style="-fx-background-color: #2196F3;" text="Clear" textFill="WHITE"
+                        GridPane.columnIndex="2"/>
+            </children>
+        </GridPane>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,123 @@
+@import 'swatches.css'
+
+.root{
+	-fx-padding : 10px;
+}
+
+.layout{
+	-fx-background-color : white;
+	-fx-effect :  dropshadow(gaussian,rgba(0,0,0,0.5),10,0,0,0);
+}
+
+.header{
+	-fx-background-color : linear-gradient(-m-blue-light-1,-m-blue,-m-blue-light-1);
+}
+
+.title {
+	-fx-padding : 0 0 0 10;
+	-fx-font-size : 13pt;
+	-fx-font-weight : bold;
+	-fx-text-fill : white;
+	-fx-font-family : "Bauhaus 93";
+}
+
+.control-box {
+	-fx-spacing : 10;
+	-fx-padding : 0 5 0 5;
+}
+
+.control-box .md-icon {
+	-fx-fill : white;
+	-fx-font-size : 8pt;
+}
+
+.control-box .button {
+	-fx-background-color : -m-teal;
+	-fx-padding : 0;
+	-fx-pref-width : 15;
+	-fx-pref-height : 15;
+	-fx-background-radius : 100%;
+}
+
+.control-box .button.close{
+	-fx-background-color : -m-red;
+}
+
+.master-detail {
+	-fx-padding : 0;
+}
+
+.master-detail .split-pane-divider{
+	-fx-background-color :#42a5f5;
+	-fx-pref-width : 1;
+}
+
+.message .msg-content{
+	-fx-padding : 3 10 3 10;
+	-fx-background-radius : 10;
+	-fx-text-fill : white;
+}
+
+
+/*
+*   FX
+*/
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar .decrement-arrow {
+    -fx-background-color: lightgray;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar .decrement-arrow:hover {
+    -fx-background-color: -fx-hover-base;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar .increment-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar .increment-arrow {
+    -fx-background-color: lightgray;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar .increment-arrow:hover {
+    -fx-background-color: -fx-hover-base;
+    -fx-border-color: transparent;
+}
+
+.scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:horizontal .thumb {
+    -fx-background-insets: 6 0 6 0;
+}
+
+.scroll-bar .thumb {
+    -fx-border-color: transparent;
+    -fx-background-color: lightgray;
+    -fx-background-insets: 0 6 0 6;
+}
+
+.scroll-bar .thumb:hover {
+    -fx-background-color: Derive(lightgray,40%);
+}
+
+.scroll-bar .thumb:selected {
+    -fx-background-color: Derive(lightgray,40%);
+}
+
+.scroll-bar .thumb:focused {
+    -fx-background-color: Derive(lightgray,40%);
+}

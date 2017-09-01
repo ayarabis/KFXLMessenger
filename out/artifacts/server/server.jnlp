@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="server.jnlp">
+  <information>
+    <title>server</title>
+    <vendor>Unknown</vendor>
+    <description>server</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="kotlin-reflect.jar" size="2441435" download="eager" />
+    <jar href="kotlin-runtime.jar" size="883403" download="eager" />
+    <jar href="server.jar" size="59384" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="p2pserver.ServerApp"  name="server" />
+  <update check="background"/>
+</jnlp>
