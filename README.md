@@ -1,1 +1,1 @@
-LanMessenger
+KotlinFx Lan Messenger
